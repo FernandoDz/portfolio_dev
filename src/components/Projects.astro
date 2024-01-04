@@ -1,0 +1,89 @@
+---
+import C from "./icons/C.astro"
+import Tailwind from "./icons/NET.astro"
+import SQL from './icons/SQL.astro'
+import Vue from "./icons/Vue.astro"
+import Nuxt from './icons/Nuxt.astro'
+import Typescript from "./icons/Typescript.astro"
+const TAGS = {
+  C: {
+    name: "C# ",
+    class: "bg-black text-white",
+    icon: C,
+  },
+  NET: {
+    name: ".NET",
+    class: "bg-black text-white",
+    icon: Tailwind,
+  },
+  SQL: {
+    name: "SQL Server",
+    class: "bg-black text-white",
+    icon: SQL,
+  },
+  Vue: {
+    name: "Vue",
+    class: "bg-black text-white",
+    icon: Vue,
+  },
+  Nuxt: {
+    name: "Nuxt",
+    class: "bg-black text-white",
+    icon: Nuxt,
+  },
+  Ts: {
+    name: "Typescript",
+    class: "bg-black text-white",
+    icon: Typescript,
+  },
+}
+const PROJECTS = [
+  {
+    title: "Sistema de Administración de tienda de videojuegos",
+    description:
+      "Created with Blazor and Mudblazor the part of the Frontend and the backend realized with  .NET and SQL.This app manages roles, users, games, consoles, collectible items from an online store ",
+    link: "https://svgl.vercel.app/",
+    github: "https://github.com/pheralb/svgl",
+    image: "https://res.cloudinary.com/dhryem3hx/image/upload/v1704331206/admin_tvcvy3.png",
+    tags: [TAGS.C, TAGS.NET , TAGS.SQL],
+  },
+  {
+    title: "Gutter Repair from ABC",
+    description:
+      "Created with Nuxt and Vue js and typescript.This promotional page made to offer construction and cleaning services for gutters in the United States",
+    link: "https://svgl.vercel.app/",
+    github: "https://github.com/pheralb/svgl",
+    image: "https://res.cloudinary.com/dhryem3hx/image/upload/v1704384523/abc_sizw6y.png",
+    tags: [TAGS.Vue, TAGS.Nuxt , TAGS.Ts],
+  },
+]
+---
+
+{
+  PROJECTS.map(({ image, title, description, tags }) => (
+    <article>
+      <h3 class="text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2 m-1 p-1">
+        {title}
+      </h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-2 flex-row mb-2">
+        {tags.map((tag) => (
+          <li>
+            <span
+              class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 border border-white/10`}
+            >
+              <tag.icon class="size-4" />
+              {tag.name}
+            </span>
+          </li>
+        ))}
+      </ul>
+      <img
+        loading="lazy"
+        class="rounded shadow-2xl shadow-white/10 aspect-video"
+        src={image}
+        alt={`Captura de pantalla del proyecto ${image}`}
+      />
+    </article>
+  ))
+}

@@ -1,0 +1,27 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EXPERIENCIE = [
+  {
+    date: "Febrero 2023 - Septiembre 2023",
+    title: "Programador − SeedCodeSv",
+    description:
+      "Responsable de equipo Frontend, componentes y utilidades para la creación y desarrollo de aplicaciones web.",
+    link: "https://www.linkedin.com/company/seedcode-sv/",
+  },
+  {
+    date: "Marzo 2022 -Enero 2023",
+    title: "Asistente de Laboratorio  − ESFE/AGAPE",
+    description:
+      "Planificación y desarrollo de actividades que permitan la sensibilización a la cultura de investigación y divulgación de la ciencia y tecnología en la comunidad estudiantil.Organización de eventos que promuevan la comunicación social de la ciencia."},
+]
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
