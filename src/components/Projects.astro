@@ -5,6 +5,9 @@ import SQL from './icons/SQL.astro'
 import Vue from "./icons/Vue.astro"
 import Nuxt from './icons/Nuxt.astro'
 import Typescript from "./icons/Typescript.astro"
+import HTML from  './icons/HTML.astro'
+import CSS from  './icons/CSS.astro'
+import Js from './icons/Js.astro'
 const TAGS = {
   C: {
     name: "C# ",
@@ -36,6 +39,21 @@ const TAGS = {
     class: "bg-black text-white",
     icon: Typescript,
   },
+  Js: {
+    name: "Javascript",
+    class: "bg-black text-white",
+    icon: Js,
+  },
+  html: {
+    name: "HTML",
+    class: "bg-black text-white",
+    icon: HTML,
+  },
+  css: {
+    name: "CSS",
+    class: "bg-black text-white",
+    icon: CSS,
+  },
 }
 const PROJECTS = [
   {
@@ -55,6 +73,15 @@ const PROJECTS = [
     github: "https://github.com/pheralb/svgl",
     image: "https://res.cloudinary.com/dhryem3hx/image/upload/v1704384523/abc_sizw6y.png",
     tags: [TAGS.Vue, TAGS.Nuxt , TAGS.Ts],
+  },
+  {
+    title: "Ecommerce",
+    description:
+      "Created with HTML , CSS and Javascript .This website is designed to make purchases in an online clothing store for men and women.",
+    link: "https://svgl.vercel.app/",
+    github: "https://github.com/pheralb/svgl",
+    image: "https://res.cloudinary.com/dhryem3hx/image/upload/v1704466603/ropa_ott767.png",
+    tags: [TAGS.html, TAGS.css , TAGS.Js],
   },
 ]
 ---
